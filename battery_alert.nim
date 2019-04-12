@@ -14,7 +14,7 @@ setControlCHook(handler)
 while true:
   # need to check if we're plugged in or not. Short Circuit everything else if we are.
   let pluggedin = strutils.parseInt(strutils.strip(readFile("/sys/class/power_supply/AC/online")))
-  if pluggedin == 0:
+  if pluggedin == 1:
     sleep(2000)
     continue
 
